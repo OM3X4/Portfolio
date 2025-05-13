@@ -11,6 +11,7 @@
 
 @theme {
     --font-worksans: "Work Sans";
+    --color-primary: #4801ff;
 }
 
 @keyframes slideDown {

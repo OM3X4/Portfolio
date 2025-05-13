@@ -1,18 +1,55 @@
-import { AiOutlineArrowLeft } from "react-icons/ai";
+import { BsFillPhoneFill } from "react-icons/bs";
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { MdOutlineMilitaryTech } from "react-icons/md";
+import { MdEventAvailable } from "react-icons/md";
+import { SiRust } from "react-icons/si";
+import { BsFillGearFill } from "react-icons/bs";
 /* eslint-disable */
-import { SiShadcnui } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiSupabase } from "react-icons/si";
-import { SiReactquery } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { DiPostgresql } from "react-icons/di";
-import { SiDjango } from "react-icons/si";
-import { DiReact } from "react-icons/di";
-import { FaQuoteRight } from "react-icons/fa";
-import { AiFillGithub } from "react-icons/ai";
+// ===== React Icons =====
+
+// Ai (Ant Design Icons)
+import { AiFillGithub, AiOutlineArrowLeft, AiOutlineLineChart } from "react-icons/ai";
+// Bs (Bootstrap Icons)
+import { BsGit, BsKeyboardFill } from "react-icons/bs";
+// Cg (CSS.gg Icons)
 import { CgLivePhoto } from "react-icons/cg";
-import { SiJavascript } from "react-icons/si";
+// Di (Devicons)
+import { DiPostgresql, DiPython, DiReact, DiResponsive } from "react-icons/di";
+// Fa (Font Awesome)
+import { FaNodeJs, FaQuoteRight } from "react-icons/fa";
+// Gr (Grommet Icons)
 import { GrLocation } from "react-icons/gr";
+// Io (Ionicons)
+import { IoLogoNpm } from "react-icons/io";
+// Md (Material Design Icons)
+import { MdHttp } from "react-icons/md";
+// Si (Simple Icons)
+import {
+    SiDjango,
+    SiJavascript,
+    SiJsonwebtokens,
+    SiLeetcode,
+    SiMicropython,
+    SiNetlify,
+    SiNextdotjs,
+    SiOpenai,
+    SiReactquery,
+    SiReactrouter,
+    SiRailway,
+    SiShadcnui,
+    SiSupabase,
+    SiTailwindcss,
+    SiTypescript
+} from "react-icons/si";
+// Tb (Tabler Icons)
+import {
+    TbApi,
+    TbBrandCpp,
+    TbBrandVite,
+    TbJson,
+    TbMathFunction,
+    TbSql
+} from "react-icons/tb";
 import { useState, useEffect, useRef } from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css'
@@ -223,6 +260,61 @@ const projects = [
     },
 ]
 
+const skills: any = [
+    { name: 'React.js', icon: <DiReact /> },
+    { name: 'Next.js', icon: <SiNextdotjs /> },
+    { name: 'TypeScript', icon: <SiTypescript /> },
+    { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
+    { name: 'ShadCN', icon: <SiShadcnui /> },
+    { name: 'Vite', icon: <TbBrandVite /> },
+    { name: 'Framer Motion (Beginner)', icon: <TbBrandFramerMotion /> },
+    { name: 'React Router', icon: <SiReactrouter /> },
+    { name: 'Responsive Design', icon: <BsFillPhoneFill /> },
+    { name: 'Django', icon: <SiDjango /> },
+    { name: 'Django REST Framework (DRF)', icon: <TbApi /> },
+    { name: 'Node.js (learning)', icon: <FaNodeJs /> },
+    { name: 'API Integration', icon: <TbApi /> },
+    { name: 'PostgreSQL', icon: <DiPostgresql /> },
+    { name: 'Supabase', icon: <SiSupabase /> },
+    { name: 'React Query', icon: <SiReactquery /> },
+    { name: 'JSON', icon: <TbJson /> },
+    { name: 'JWT', icon: <SiJsonwebtokens /> },
+    { name: 'Data Structures and Algorithms (DSA)', icon: <SiLeetcode /> },
+    { name: 'OpenAI API', icon: <SiOpenai /> },
+    { name: 'Git', icon: <BsGit /> },
+    { name: 'GitHub', icon: <AiFillGithub /> },
+    { name: 'Railway', icon: <SiRailway /> },
+    { name: 'Netlify', icon: <SiNetlify /> },
+    { name: 'Recharts', icon: <AiOutlineLineChart /> },
+    { name: 'NPM', icon: <IoLogoNpm /> },
+    { name: 'Pip', icon: <SiMicropython /> },
+    { name: 'C++', icon: <TbBrandCpp /> },
+    { name: 'SQL', icon: <TbSql /> },
+    { name: 'Functional Programming', icon: <TbMathFunction /> },
+    { name: 'HTTP', icon: <MdHttp /> },
+    { name: 'Typiest (Colemak - 200 WPM)', icon: <BsKeyboardFill /> },
+];
+
+const about = {
+    whoami1: "I'm a performance-obsessed 17-y/o front-end developer based in Egypt, building highly interactive, responsive, and optimized digital experiences. I work mainly with React.js, Next.js, TypeScript, and Tailwind CSS, combining solid development with clean design and smooth animations.",
+    whoami2: "I'm also incredibly efficient with my tools — I type at 200 WPM using the Colemak layout, allowing me to prototype and code at blazing speed.",
+    enjoylist: [
+        { text: "Solid foundation in C++ and Python", icon: <DiPython /> },
+        { text: "Strong grasp of Data Structures & Algorithms", icon: <SiLeetcode /> },
+        { text: "Learning Rust to dive into systems-level programming", icon: <SiRust /> },
+        { text: "Exploring Node.js and Native Development", icon: <FaNodeJs /> },
+        { text: "Passionate about writing efficient, scalable code", icon: <BsFillGearFill /> },
+        { text: "Curious about low-level concepts, performance tuning, and functional programming", icon: <TbMathFunction /> }
+    ],
+    availablityList: [
+        "Open to freelance opportunities and summer internships",
+        "Open to work with indiehackers",
+        "Currently building projects & sharpening skills daily",
+        "Always learning, always optimizing"
+    ]
+
+
+}
 
 function App() {
 
@@ -231,10 +323,11 @@ function App() {
     const headerRef = useRef<HTMLDivElement>(null);
     const [top, setTop] = useState("0px");
     const [scrollState, setScrollState] = useState(0) // 0 = up , 1 = middle , 2 = down
+    const [isSkills, setIsSkills] = useState(false)
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [isProject]);
+    }, [isProject, isSkills]);
 
     const handleClick = (e: React.MouseEvent<HTMLDivElement>, projectIndex: number) => {
         document.body.classList.add("pointer-events-none");
@@ -255,7 +348,7 @@ function App() {
     useEffect(() => {
         AOS.init({
             duration: 800, // animation duration
-            once: false,    // whether animation should happen only once - while scrolling down
+            once: true,    // whether animation should happen only once - while scrolling down
         });
     })
 
@@ -296,11 +389,15 @@ function App() {
         }
     }, []);
 
+    // to do : stop the infinite in the aos
+
     return (
-        <div className='bg-[#4801ff] min-w-screen min-h-screen flex justify-end items-center overflow-hidden'>
+        <div className='bg-primary min-w-screen min-h-screen flex justify-end items-center overflow-hidden'>
+            {/* absolute claim to eric van holtz design */}
+            <div className="absolute left-2 top-2 w-fit h-fit opacity-50 text-xs text-white">Design by Eric Van Holtz</div>
             {/* arrow to go back (absolute) */}
             {
-                isProject && (
+                isProject || isSkills && (
                     <div
                         onClick={(e) => {
                             const el = e.currentTarget;
@@ -314,6 +411,7 @@ function App() {
 
                             setTimeout(() => {
                                 setIsProject(false);
+                                setIsSkills(false)
                             }, 400); // matches transition duration
                         }}
                         className="size-10 border border-white absolute top-10 right-10 flex items-center justify-center text-2xl text-white cursor-pointer hover:scale-125 rounded-full"
@@ -323,50 +421,66 @@ function App() {
                 )
             }
             {/* overlay(absolute) */}
-            <div className={`fixed left-0 flex justify-start pb-10 pt-5 px-15 z-50 transition-all duration-1000 ease-in-out ${isProject ? "flex-row items-end" : "flex-col items-start"}`} ref={headerRef}
-                style={{ top: isProject ? 0 : top, opacity: isProject && scrollState ? 0.4 : 1 }}>
-                <div onClick={() => setIsProject(false)}
+            <div className={`fixed left-0 flex justify-start pb-5 pt-5 px-15 z-50 transition-all duration-1000 ease-in-out ${isProject || isSkills ? "flex-row items-end" : "flex-row items-end"}`} ref={headerRef}
+                style={{ top: isProject || isSkills ? 0 : top, opacity: (isProject || isSkills) && scrollState ? 0.4 : 1 }}>
+                <div onClick={() => { setIsProject(false); setIsSkills(false) }}
                     className='w-fit flex items-start justify-start flex-col scale-y-[85%] cursor-pointer ease-in-out group
                                 text-white text-6xl font-black leading-[0.8] hover:text-transparent text-stroke-1 text-stroke-white'
-                    style={{ color: isProject && scrollState ? "transparent" : "" }}>
+                    style={{ color: (isProject || isSkills) && scrollState ? "transparent" : "" }}>
                     <span className='relative overflow-hidden pb-1'>
                         IAM
-                        <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-[#4801ff]'
+                        <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
                             style={{ MozAnimationFillMode: 'forwards', animationDelay: '1.8s' }}></div>
                     </span>
                     <span className='relative overflow-hidden pb-1'>
                         OMAR
-                        <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-[#4801ff]'
+                        <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
                             style={{ MozAnimationFillMode: 'forwards', animationDelay: '2.1s' }}></div>
                     </span>
                     <span className='relative overflow-hidden flex items-end gap-1 justify-center pb-1'>
                         ME<div className='size-4 bg-white border border-white group-hover:bg-transparent'></div>
 
-                        <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-[#4801ff]'
+                        <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
                             style={{ MozAnimationFillMode: 'forwards', animationDelay: '2.4s' }}></div>
                     </span>
                 </div>
                 <div>
                     <div className='mt-5 text-white flex items-center justify-start gap-10'>
-                        {!isProject ?
-                            <>
-                                <div className='flex items-start justify-start flex-col  '>
-                                    <h1>Omar Emad</h1>
-                                    <h1>Software Engineer</h1>
-                                </div>
-                                <div className='flex items-start justify-start flex-col  '>
-                                    <h1 className="flex items-center justify-center"><GrLocation />Egypt</h1>
-                                    <h1 className="font-semibold hover:rotate-y-30 origin-left cursor-pointer">om3x4e@gmail.com</h1>
-                                </div>
-                            </>
-                            : ""}
-                        <div className='flex items-start justify-start flex-col  perspective-[1000px]'>
-                            <h1 className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer"><span className="text-xs ">01</span>Skills</h1>
-                            <a target="blank" className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer"><span className="text-xs ">02</span>Github</a>
+                        <div className='flex items-start justify-start flex-col' data-aos="fade-up" data-aos-delay="500">
+                            <h1>Omar Emad</h1>
+                            <h1>Software Engineer</h1>
                         </div>
-                        <div className='flex items-start justify-start flex-col  perspective-[1000px]'>
-                            <a target="blank" className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer "><span className="text-xs">03</span>X <span className="text-xs">(Twitter)</span></a>
-                            <a target="blank" className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer"><span className="text-xs ">04</span>LinkedIn</a>
+                        <div className='flex items-start justify-start flex-col' data-aos="fade-up" data-aos-delay="700">
+                            <h1 className="flex items-center justify-center"><GrLocation />Egypt</h1>
+                            <h1 className="font-semibold hover:rotate-y-30 origin-left cursor-pointer">om3x4e@gmail.com</h1>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="900"
+                            className='flex items-start justify-start flex-col  perspective-[1000px]'>
+                            <h1
+                                onClick={() => {setIsSkills(!isSkills); setIsProject(false)}}
+                                className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
+                                <span className="text-xs ">01</span>
+                                Skills
+                                <span className={`bg-white h-[1px] ${isSkills ? "w-10" : "w-0"} delay-800 ease-in-out`}></span>
+                            </h1>
+                            <a  href="https://github.com/OM3X4"
+                                target="blank"
+                                className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
+                                <span className="text-xs ">02</span>
+                                Github
+                            </a>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="1100"
+                            className='flex items-start justify-start flex-col  perspective-[1000px]'>
+                            <a  href="https://x.com/OmarInProgress"
+                                target="blank" className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer ">
+                                <span className="text-xs">03</span>X <span className="text-xs">(Twitter)</span>
+                            </a>
+                            <a  href="https://www.linkedin.com/in/om3x4/"
+                                target="blank"
+                                className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
+                                <span className="text-xs ">04</span>LinkedIn
+                            </a>
                         </div>
                     </div>
 
@@ -374,7 +488,8 @@ function App() {
             </div>
             {
                 isProject ?
-                    <div className="min-h-screen bg-[#4801ff] w-screen">
+                    // project page
+                    <div className="min-h-screen bg-primary w-screen">
                         {/* img part */}
                         <div className="w-screen h-[70vh]  mt-[25vh]  relative" data-aos="fade-up" data-aos-offset="300">
                             <h1 className="whitespace-pre-wrap text-right text-9xl top-0 -translate-y-1/2 z-50 right-10 absolute text-transparent font-black text-stroke-2 scale-x-105 mx-10 text-stroke-white">{projects[projectId].name}</h1>
@@ -382,7 +497,7 @@ function App() {
                                 <img src={projects[projectId].images[0]} alt="" className={`object-cover`} />
                             </div>
                         </div>
-                        <div className="flex items-center justify-center w-screen">
+                        <div className="flex items-start justify-center w-screen">
                             {/* main text */}
                             <div className="w-[80%] px-20 py-20 text-white flex flex-col">
                                 {/* first text div */}
@@ -419,7 +534,7 @@ function App() {
 
                                 <a href={projects[projectId].codeLink} target="blank" className="text-lg  cursor-pointer flex items-center justify-center gap-2 hover:text-black"><AiFillGithub />Github</a>
 
-                                <h1 className="text-sm ">Built By <span className="text-lg font-bold">{projects[projectId].engineer}</span></h1>
+                                <h1 className="text-sm ">Built By<div className="text-lg font-bold">{projects[projectId].engineer}</div></h1>
 
                                 <div>
                                     <h1 className="text-lg font-semibold">Stack</h1>
@@ -436,22 +551,70 @@ function App() {
                         </div>
                     </div>
                     :
-                    <div className='animate-slideDown-custom perspective-[1000px] pt-20 px-30 flex flex-col gap-0 max-w-[90vw]'>
-                        {
-                            data.map((item, index) => (
-                                <div key={index}
-                                    onClick={e => handleClick(e, index)}
-                                    className={`flex flex-row-reverse opacity-0 cursor-pointer origin-right animate-all -rotate-y-15 hover:-rotate-y-5 duration-700 ease-in-out`}
-                                    style={{ animationDelay: `${index * 0.1}s` }}>
-                                    <h1 className='text-[11rem] font-black text-right tracking-tight text-black !font-sans hover:text-transparent leading-[0.8] text-stroke-medium whitespace-pre-wrap'>
-                                        {item}
-                                    </h1>
-                                </div>
-                            ))
-                        }
-                    </div>
+                    // skills page
+                    isSkills ?
+                        <div className="mt-[30vh] w-screen min-h-[70vh] flex items-start justify-center py-10">
+                            {/* main text */}
+                            <div className="flex-[2.5] min-h-[70vh] pl-10 pt-10">
+                                <h1 className="text-2xl text-white font-semibold" data-aos="fade-up" data-aos-delay="500">{about.whoami1}</h1>
+                                <h1 className="text-2xl text-white mt-4" data-aos="fade-up" data-aos-delay="700">{about.whoami2}</h1>
+                                <h1 className="text-4xl text-white font-bold mt-15 flex items-center gap-2" data-aos="fade-up" data-aos-delay="900"><BsFillGearFill />Beyond the Frontend</h1>
+                                <ul className="ml-5 mt-4 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="1000">
+                                    {
+                                        about.enjoylist.map((item: any) => {
+                                            return <div className="text-white text-xl flex items-center gap-2">
+                                                {item.icon}{item.text}
+                                            </div>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                            {/* availability */}
+                            <div className="flex-1 flex items-start justify-start flex-col min-h-[70vh] pl-10 pt-5">
+                                <h1 className="text-2xl text-white  mt-5 flex items-center gap-2" data-aos="fade-up" data-aos-delay="1000"><MdEventAvailable />Availability</h1>
+                                <ul className="ml-5 mt-4 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="1000">
+                                    {
+                                        about.availablityList.map((item) => {
+                                            return <div className="text-white text-lg flex items-center gap-2">
+                                                {item}
+                                            </div>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                            {/* stack */}
+                            <div className="flex-1 min-h-[70vh] pt-5 pl-5">
+                                <h1 className="text-2xl text-white mt-5 flex items-center gap-2" data-aos="fade-up" data-aos-delay="1200"><MdOutlineMilitaryTech />Stack</h1>
+                                <ul className="text-white text my-2 ml-5" data-aos="fade-up" data-aos-delay="1400">
+                                    {
+                                        skills.map((item: any) => {
+                                            return <div>
+                                                <li className="flex items-center gap-2 text-white">
+                                                    {item.icon}{item.name}
+                                                </li>
+                                            </div>
+                                        })
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        :
+                        <div className='animate-slideDown-custom perspective-[1000px] pt-10 sm:pt-20 px-5 sm:px-10 md:px-20 lg:px-25 xl:px-30 flex flex-col gap-0 max-w-[90vw]'>
+                            {
+                                data.map((item, index) => (
+                                    <div key={index}
+                                        onClick={e => handleClick(e, index)}
+                                        className={`flex flex-row-reverse opacity-0 cursor-pointer origin-right animate-all -rotate-y-15 hover:-rotate-y-5 duration-700 ease-in-out`}
+                                        style={{ animationDelay: `${index * 0.1}s` }}>
+                                        <h1 className='text-[5rem] sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] font-black text-right tracking-tight text-black !font-sans hover:text-transparent leading-[0.8] text-stroke-medium whitespace-pre-wrap'>
+                                            {item}
+                                        </h1>
+                                    </div>
+                                ))
+                            }
+                        </div>
             }
-        </div>
+        </div >
     )
 }
 
