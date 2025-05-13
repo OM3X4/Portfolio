@@ -334,7 +334,7 @@ function App() {
         e.currentTarget.classList.add("rotate-y-0");
         e.currentTarget.classList.remove("hover:-rotate-y-5");
         e.currentTarget.firstElementChild?.classList.remove("text-black")
-        e.currentTarget.firstElementChild?.classList.add("text-transparent")
+        e.currentTarget.firstElementChild?.classList.add("sm:text-transparent")
 
 
         setProjectId(projectIndex)
@@ -392,7 +392,7 @@ function App() {
     // to do : stop the infinite in the aos
 
     return (
-        <div className='bg-primary min-w-screen min-h-screen flex justify-end items-center overflow-hidden'>
+        <div className='bg-primary min-w-screen min-h-screen flex  items-end flex-col overflow-hidden'>
             {/* absolute claim to eric van holtz design */}
             <div className="absolute left-2 top-2 w-fit h-fit opacity-50 text-xs text-white">Design by Eric Van Holtz</div>
             {/* arrow to go back (absolute) */}
@@ -420,8 +420,73 @@ function App() {
                     </div>
                 )
             }
+            {/* overlay for mobile */}
+            <div className={`flex sm:hidden  flex-col self-start justify-start pt-7 px-3 z-50 transition-all duration-1000 ease-in-out`} ref={headerRef}
+            >
+                <div className="flex items-end justify-start text-white gap-3 text-xs">
+                    <div onClick={() => { setIsProject(false); setIsSkills(false) }}
+                        className='w-fit flex items-start justify-start flex-col scale-y-[85%] cursor-pointer ease-in-out group
+                                    text-white text-3xl font-black leading-[0.8] hover:text-transparent text-stroke-1 text-stroke-white'
+                        style={{ color: (isProject || isSkills) && scrollState ? "transparent" : "" }}>
+                        <span className='relative overflow-hidden pb-1'>
+                            IAM
+                            <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
+                                style={{animationFillMode: "forwards" , WebkitAnimationFillMode:"fowrards" ,MozAnimationFillMode: 'forwards', animationDelay: '1.8s' }}></div>
+                        </span>
+                        <span className='relative overflow-hidden pb-1'>
+                            OMAR
+                            <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
+                                style={{animationFillMode: "forwards" , WebkitAnimationFillMode:"fowrards" ,MozAnimationFillMode: 'forwards', animationDelay: '2.1s' }}></div>
+                        </span>
+                        <span className='relative overflow-hidden flex items-end gap-1 justify-center pb-1'>
+                            ME<div className='size-2 bg-white border border-white group-hover:bg-transparent'></div>
+
+                            <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
+                                style={{animationFillMode: "forwards" , WebkitAnimationFillMode:"fowrards" ,MozAnimationFillMode: 'forwards', animationDelay: '2.4s' }}></div>
+                        </span>
+                    </div>
+                    <div className='flex items-start justify-start flex-col' data-aos="fade-up" data-aos-delay="500">
+                        <h1>Omar Emad</h1>
+                        <h1>Software Engineer</h1>
+                    </div>
+                    <div className='flex items-start justify-start flex-col' data-aos="fade-up" data-aos-delay="700">
+                        <h1 className="flex items-center justify-center"><GrLocation />Egypt</h1>
+                        <h1 className="font-semibold hover:rotate-y-30 origin-left cursor-pointer">om3x4e@gmail.com</h1>
+                    </div>
+                </div>
+                <div className='mt-3 text-white flex items-center justify-start gap-10'>
+                    <div data-aos="fade-up" data-aos-delay="900"
+                        className='flex items-start justify-start flex-col  perspective-[1000px]'>
+                        <h1
+                            onClick={() => { setIsSkills(!isSkills); setIsProject(false) }}
+                            className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
+                            <span className="text-xs ">01</span>
+                            Skills
+                            <span className={`bg-white h-[1px] ${isSkills ? "w-10" : "w-0"} delay-800 ease-in-out`}></span>
+                        </h1>
+                        <a href="https://github.com/OM3X4"
+                            target="blank"
+                            className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
+                            <span className="text-xs ">02</span>
+                            Github
+                        </a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="1100"
+                        className='flex items-start justify-start flex-col  perspective-[1000px]'>
+                        <a href="https://x.com/OmarInProgress"
+                            target="blank" className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer ">
+                            <span className="text-xs">03</span>X <span className="text-xs">(Twitter)</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/om3x4/"
+                            target="blank"
+                            className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
+                            <span className="text-xs ">04</span>LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
             {/* overlay(absolute) */}
-            <div className={`fixed left-0 flex justify-start pb-5 pt-5 px-15 z-50 transition-all duration-1000 ease-in-out ${isProject || isSkills ? "flex-row items-end" : "flex-row items-end"}`} ref={headerRef}
+            <div className={`hidden fixed left-0 sm:flex justify-start pb-5 pt-5 px-15 z-50 transition-all duration-1000 ease-in-out ${isProject || isSkills ? "flex-row items-end" : "flex-row items-end"}`} ref={headerRef}
                 style={{ top: isProject || isSkills ? 0 : top, opacity: (isProject || isSkills) && scrollState ? 0.4 : 1 }}>
                 <div onClick={() => { setIsProject(false); setIsSkills(false) }}
                     className='w-fit flex items-start justify-start flex-col scale-y-[85%] cursor-pointer ease-in-out group
@@ -457,13 +522,13 @@ function App() {
                         <div data-aos="fade-up" data-aos-delay="900"
                             className='flex items-start justify-start flex-col  perspective-[1000px]'>
                             <h1
-                                onClick={() => {setIsSkills(!isSkills); setIsProject(false)}}
+                                onClick={() => { setIsSkills(!isSkills); setIsProject(false) }}
                                 className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
                                 <span className="text-xs ">01</span>
                                 Skills
                                 <span className={`bg-white h-[1px] ${isSkills ? "w-10" : "w-0"} delay-800 ease-in-out`}></span>
                             </h1>
-                            <a  href="https://github.com/OM3X4"
+                            <a href="https://github.com/OM3X4"
                                 target="blank"
                                 className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
                                 <span className="text-xs ">02</span>
@@ -472,11 +537,11 @@ function App() {
                         </div>
                         <div data-aos="fade-up" data-aos-delay="1100"
                             className='flex items-start justify-start flex-col  perspective-[1000px]'>
-                            <a  href="https://x.com/OmarInProgress"
+                            <a href="https://x.com/OmarInProgress"
                                 target="blank" className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer ">
                                 <span className="text-xs">03</span>X <span className="text-xs">(Twitter)</span>
                             </a>
-                            <a  href="https://www.linkedin.com/in/om3x4/"
+                            <a href="https://www.linkedin.com/in/om3x4/"
                                 target="blank"
                                 className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer">
                                 <span className="text-xs ">04</span>LinkedIn
@@ -491,17 +556,17 @@ function App() {
                     // project page
                     <div className="min-h-screen bg-primary w-screen">
                         {/* img part */}
-                        <div className="w-screen h-[70vh]  mt-[25vh]  relative" data-aos="fade-up" data-aos-offset="300">
-                            <h1 className="whitespace-pre-wrap text-right text-9xl top-0 -translate-y-1/2 z-50 right-10 absolute text-transparent font-black text-stroke-2 scale-x-105 mx-10 text-stroke-white">{projects[projectId].name}</h1>
+                        <div className="w-screen h-[70vh] mt-20 sm:mt-[25vh]  relative" data-aos="fade-up" data-aos-offset="300">
+                            <h1 className="whitespace-pre-wrap text-right text-4xl sm:text-6xl md:text-7xl lg:text-8xl  xl:text-9xl top-0 -translate-y-1/2 z-50 right-10 absolute md:text-transparent font-black md:text-stroke-2 scale-x-105 mx-10 text-white md:text-stroke-white">{projects[projectId].name}</h1>
                             <div className="w-screen h-[70vh] flex overflow-hidden items-center justify-center brightness-75 relative">
-                                <img src={projects[projectId].images[0]} alt="" className={`object-cover`} />
+                                <img src={projects[projectId].images[0]} alt="" className={`object-cover h-full w-full`} />
                             </div>
                         </div>
-                        <div className="flex items-start justify-center w-screen">
+                        <div className="flex items-start justify-center w-screen flex-col md:flex-row">
                             {/* main text */}
-                            <div className="w-[80%] px-20 py-20 text-white flex flex-col">
+                            <div className="w-[80%] px-5 md:px-20 py-20 text-white flex flex-col">
                                 {/* first text div */}
-                                <div className="flex items-start justify-center gap-10 mb-40">
+                                <div className="flex items-start justify-center gap-10 mb-40 flex-col md:flex-row">
                                     <div className="flex-1" data-aos="fade-up" data-aos-offset="300" data-aos-delay="100">
                                         <h1 className="text-4xl font-bold mb-2">{projects[projectId].mainHeadline}</h1>
                                         <p className="text-2xl">{projects[projectId].secondParagraph}</p>
@@ -511,7 +576,7 @@ function App() {
                                     </div>
                                 </div>
                                 {/* image */}
-                                <div className="w-full">
+                                <div className="md:w-full md:h-full w-[90vw]">
                                     <img src={projects[projectId].images[1]} alt="" className="w-full h-full object-cover" />
                                 </div>
                                 {/* text after image */}
@@ -520,11 +585,11 @@ function App() {
                                 </div>
                                 {/* quote */}
                                 <div data-aos="fade-right" data-aos-offset="300" data-aos-delay="300">
-                                    <h1 className="text-6xl font-bold mt-20 w-2/3"><FaQuoteRight />{projects[projectId].quote}</h1>
+                                    <h1 className="text-3xl sm:text-4xl md:text-5xl:text-6xl font-bold mt-20 md:w-2/3"><FaQuoteRight />{projects[projectId].quote}</h1>
                                 </div>
                             </div>
                             {/* side bar */}
-                            <div className="w-[20%] flex items-start justify-start flex-col text-white py-20 px-10 gap-5"
+                            <div className="md:w-[20%] flex items-start justify-start flex-col text-white py-20 px-10 gap-5"
                                 data-aos="fade-up" data-aos-offset="300">
                                 <div>
                                     <a href={projects[projectId].websiteLink} target="blank"
@@ -553,9 +618,9 @@ function App() {
                     :
                     // skills page
                     isSkills ?
-                        <div className="mt-[30vh] w-screen min-h-[70vh] flex items-start justify-center py-10">
+                        <div className="mt-10 md:mt-[30vh] w-screen min-h-[70vh] flex items-start justify-center md:py-10 flex-col md:flex-row">
                             {/* main text */}
-                            <div className="flex-[2.5] min-h-[70vh] pl-10 pt-10">
+                            <div className="flex-[2.5] min-h-[70vh] px-5 md:pl-10 pt-10">
                                 <h1 className="text-2xl text-white font-semibold" data-aos="fade-up" data-aos-delay="500">{about.whoami1}</h1>
                                 <h1 className="text-2xl text-white mt-4" data-aos="fade-up" data-aos-delay="700">{about.whoami2}</h1>
                                 <h1 className="text-4xl text-white font-bold mt-15 flex items-center gap-2" data-aos="fade-up" data-aos-delay="900"><BsFillGearFill />Beyond the Frontend</h1>
@@ -570,7 +635,7 @@ function App() {
                                 </ul>
                             </div>
                             {/* availability */}
-                            <div className="flex-1 flex items-start justify-start flex-col min-h-[70vh] pl-10 pt-5">
+                            <div className="flex-1 flex items-start justify-start flex-col md:min-h-[70vh] px-5 md:pl-10 pt-5">
                                 <h1 className="text-2xl text-white  mt-5 flex items-center gap-2" data-aos="fade-up" data-aos-delay="1000"><MdEventAvailable />Availability</h1>
                                 <ul className="ml-5 mt-4 flex flex-col gap-3" data-aos="fade-up" data-aos-delay="1000">
                                     {
@@ -606,7 +671,7 @@ function App() {
                                         onClick={e => handleClick(e, index)}
                                         className={`flex flex-row-reverse opacity-0 cursor-pointer origin-right animate-all -rotate-y-15 hover:-rotate-y-5 duration-700 ease-in-out`}
                                         style={{ animationDelay: `${index * 0.1}s` }}>
-                                        <h1 className='text-[5rem] sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] font-black text-right tracking-tight text-black !font-sans hover:text-transparent leading-[0.8] text-stroke-medium whitespace-pre-wrap'>
+                                        <h1 className='text-[5rem] sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] font-black text-right tracking-normal sm:tracking-tight text-black !font-sans  leading-none md:leading-[0.8] hover:text-white md:text-stroke-medium whitespace-pre-wrap'>
                                             {item}
                                         </h1>
                                     </div>
