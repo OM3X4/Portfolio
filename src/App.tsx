@@ -14,7 +14,7 @@ import { BsGit, BsKeyboardFill } from "react-icons/bs";
 // Cg (CSS.gg Icons)
 import { CgLivePhoto } from "react-icons/cg";
 // Di (Devicons)
-import { DiPostgresql, DiPython, DiReact, DiResponsive } from "react-icons/di";
+import { DiPostgresql, DiPython, DiReact } from "react-icons/di";
 // Fa (Font Awesome)
 import { FaNodeJs, FaQuoteRight } from "react-icons/fa";
 // Gr (Grommet Icons)
@@ -57,11 +57,11 @@ import 'aos/dist/aos.css'
 const data = [
     "BRAINS-\nMATH2.0",
     "QUEEN-\nFISH",
-    "STUDX",
-    "BRAINS-\nMATH1.0",
     "EGYPT-\nPROJECTS",
     "CHEEZY",
-    "OMARTYPE"
+    "STUDX",
+    "OMARTYPE",
+    "BRAINS-\nMATH1.0",
 ]
 
 const projects = [
@@ -133,69 +133,6 @@ const projects = [
         ]
     },
     {
-        name: "STUDX",
-        images: [
-            "/studx1.png",
-            "/studx2.png",
-        ],
-        mainHeadline: "Studx: A Full-Stack Studying Management Platform for Smarter Learning",
-        secondParagraph: "Studx is a platform that helps users manage their study routines and progress efficiently.",
-        mainParagraph: "Built with Next.js, React, Django, and PostgreSQL, Studx is a complete studying management system. It streamlines how students organize, track, and optimize their study habits in one unified platform.",
-        thirdParagraph: "Studx was created as a training project to connect full-stack technologies in one product. The biggest challenge was connecting the backend to the frontend smoothly using DRF and React Query.",
-        quote: 'Studx wasn’t about inventing something new — it was about putting everything I’ve learned into action. It tested my ability to build a full-stack product from frontend to backend and helped sharpen my understanding of real-world connections between technologies." — Omar Emad',
-        websiteLink: "https://github.com/OM3X4/StudXClient",
-        codeLink: "https://github.com/OM3X4/StudXClient",
-        engineer: "Omar Emad(Me)",
-        stack: [
-            {
-                name: "React",
-                icon: <DiReact />
-            },
-            {
-                name: "Django",
-                icon: <SiDjango />
-            },
-            {
-                name: "Postgres",
-                icon: <DiPostgresql />
-            },
-            {
-                name: "TypeScript",
-                icon: <SiTypescript />
-            },
-            {
-                name: "React Query",
-                icon: <SiReactquery />
-            },
-            {
-                name: "Supabase",
-                icon: <SiSupabase />
-            }
-
-        ]
-    },
-    {
-        name: "BRAINS-\nMATH1.0",
-        images: [
-            "/brainsmath1.01.png",
-            "/brainsmath1.02.png",
-        ],
-        mainHeadline: "Brainsmath is a Mental Math Practice Engine Inspired by TypingClub and Monkeytype",
-        secondParagraph: "BrainsMath helps users master mental math tricks through structured lessons and focused practice sessions.",
-        mainParagraph: "BrainsMath 1.0 is a platform I built to teach and drill mental math. It uses structured repetition, like TypingClub, and aims to make learning tricks fun, fast, and trackable.",
-        thirdParagraph: "BrainsMath teaches tricks that make mental math faster, smarter, and more intuitive to learn.",
-        quote: '"BrainsMath 1.0 is my take on making math training as addictive as typing practice. I wanted to build something that teaches, tracks, and motivates — all in one experience. It’s not about speed alone, but how smartly and confidently you can calculate in your head." — Omar Emad',
-        websiteLink: "https://github.com/OM3X4/BrainsMath_Next",
-        codeLink: "https://github.com/OM3X4/BrainsMath_Next",
-        engineer: "Omar Emad(Me)",
-        stack: [
-            {
-                name: "Next.js",
-                icon: <SiNextdotjs />
-            },
-        ]
-    },
-    {
         name: "EGYPT-\nPROJECTS",
         images: [
             "/egyptprojects1.png",
@@ -238,6 +175,48 @@ const projects = [
         ]
     },
     {
+        name: "STUDX",
+        images: [
+            "/studx1.png",
+            "/studx2.png",
+        ],
+        mainHeadline: "Studx: A Full-Stack Studying Management Platform for Smarter Learning",
+        secondParagraph: "Studx is a platform that helps users manage their study routines and progress efficiently.",
+        mainParagraph: "Built with Next.js, React, Django, and PostgreSQL, Studx is a complete studying management system. It streamlines how students organize, track, and optimize their study habits in one unified platform.",
+        thirdParagraph: "Studx was created as a training project to connect full-stack technologies in one product. The biggest challenge was connecting the backend to the frontend smoothly using DRF and React Query.",
+        quote: 'Studx wasn’t about inventing something new — it was about putting everything I’ve learned into action. It tested my ability to build a full-stack product from frontend to backend and helped sharpen my understanding of real-world connections between technologies." — Omar Emad',
+        websiteLink: "https://github.com/OM3X4/StudXClient",
+        codeLink: "https://github.com/OM3X4/StudXClient",
+        engineer: "Omar Emad(Me)",
+        stack: [
+            {
+                name: "React",
+                icon: <DiReact />
+            },
+            {
+                name: "Django",
+                icon: <SiDjango />
+            },
+            {
+                name: "Postgres",
+                icon: <DiPostgresql />
+            },
+            {
+                name: "TypeScript",
+                icon: <SiTypescript />
+            },
+            {
+                name: "React Query",
+                icon: <SiReactquery />
+            },
+            {
+                name: "Supabase",
+                icon: <SiSupabase />
+            }
+
+        ]
+    },
+    {
         name: "OMARTYPE",
         images: [
             "/omartype1.png",
@@ -255,6 +234,27 @@ const projects = [
             {
                 name: "React",
                 icon: <DiReact />
+            },
+        ]
+    },
+    {
+        name: "BRAINS-\nMATH1.0",
+        images: [
+            "/brainsmath1.01.png",
+            "/brainsmath1.02.png",
+        ],
+        mainHeadline: "Brainsmath is a Mental Math Practice Engine Inspired by TypingClub and Monkeytype",
+        secondParagraph: "BrainsMath helps users master mental math tricks through structured lessons and focused practice sessions.",
+        mainParagraph: "BrainsMath 1.0 is a platform I built to teach and drill mental math. It uses structured repetition, like TypingClub, and aims to make learning tricks fun, fast, and trackable.",
+        thirdParagraph: "BrainsMath teaches tricks that make mental math faster, smarter, and more intuitive to learn.",
+        quote: '"BrainsMath 1.0 is my take on making math training as addictive as typing practice. I wanted to build something that teaches, tracks, and motivates — all in one experience. It’s not about speed alone, but how smartly and confidently you can calculate in your head." — Omar Emad',
+        websiteLink: "https://github.com/OM3X4/BrainsMath_Next",
+        codeLink: "https://github.com/OM3X4/BrainsMath_Next",
+        engineer: "Omar Emad(Me)",
+        stack: [
+            {
+                name: "Next.js",
+                icon: <SiNextdotjs />
             },
         ]
     },
@@ -431,18 +431,18 @@ function App() {
                         <span className='relative overflow-hidden pb-1'>
                             IAM
                             <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
-                                style={{animationFillMode: "forwards" , WebkitAnimationFillMode:"fowrards" ,MozAnimationFillMode: 'forwards', animationDelay: '1.8s' }}></div>
+                                style={{ animationFillMode: "forwards", WebkitAnimationFillMode: "fowrards", MozAnimationFillMode: 'forwards', animationDelay: '1.8s' }}></div>
                         </span>
                         <span className='relative overflow-hidden pb-1'>
                             OMAR
                             <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
-                                style={{animationFillMode: "forwards" , WebkitAnimationFillMode:"fowrards" ,MozAnimationFillMode: 'forwards', animationDelay: '2.1s' }}></div>
+                                style={{ animationFillMode: "forwards", WebkitAnimationFillMode: "fowrards", MozAnimationFillMode: 'forwards', animationDelay: '2.1s' }}></div>
                         </span>
                         <span className='relative overflow-hidden flex items-end gap-1 justify-center pb-1'>
                             ME<div className='size-2 bg-white border border-white group-hover:bg-transparent'></div>
 
                             <div className='absolute animate-slideUp top-0 left-0 w-full h-full bg-primary'
-                                style={{animationFillMode: "forwards" , WebkitAnimationFillMode:"fowrards" ,MozAnimationFillMode: 'forwards', animationDelay: '2.4s' }}></div>
+                                style={{ animationFillMode: "forwards", WebkitAnimationFillMode: "fowrards", MozAnimationFillMode: 'forwards', animationDelay: '2.4s' }}></div>
                         </span>
                     </div>
                     <div className='flex items-start justify-start flex-col' data-aos="fade-up" data-aos-delay="500">
@@ -556,13 +556,19 @@ function App() {
                     // project page
                     <div className="min-h-screen bg-primary w-screen">
                         {/* img part */}
-                        <div className="w-screen h-[70vh] mt-20 sm:mt-[25vh]  relative" data-aos="fade-up" data-aos-offset="300">
-                            <h1 className="whitespace-pre-wrap text-right text-4xl sm:text-6xl md:text-7xl lg:text-8xl  xl:text-9xl top-0 -translate-y-1/2 z-50 right-10 absolute md:text-transparent font-black md:text-stroke-2 scale-x-105 mx-10 text-white md:text-stroke-white">{projects[projectId].name}</h1>
-                            <div className="w-screen h-[70vh] flex overflow-hidden items-center justify-center brightness-75 relative">
+                        <div className="w-screen h-[70vh] mt-20 sm:mt-[28vh]  relative" data-aos="fade-up" data-aos-offset="300">
+                            <h1 className=" whitespace-pre-wrap text-right text-4xl sm:text-6xl md:text-7xl lg:text-8xl  xl:text-9xl top-0 -translate-y-1/2 z-50 right-10 absolute md:text-transparent font-black md:text-stroke-2 scale-x-105 mx-10 text-white md:text-stroke-white">
+                                {projects[projectId].name}
+                                <div className="absolute top-0 left-0 w-full h-full bg-primary animate-slideUp"
+                                    style={{ animationFillMode: 'forwards', MozAnimationFillMode: 'forwards', animationDelay: '0.8s' }}></div>
+                            </h1>
+                            <div className="w-screen h-[70vh] flex overflow-hidden items-center justify-center relative">
                                 <img src={projects[projectId].images[0]} alt="" className={`object-cover h-full w-full`} />
+                                <div className="absolute top-0 left-0 w-full h-full bg-primary animate-slideUp"
+                                    style={{ animationFillMode: 'forwards', MozAnimationFillMode: 'forwards', animationDelay: '1.2s' }}></div>
                             </div>
                         </div>
-                        <div className="flex items-start justify-center w-screen flex-col md:flex-row">
+                        <div className="flex items-start justify-center w-screen flex-col-reverse md:flex-row">
                             {/* main text */}
                             <div className="w-[80%] px-5 md:px-20 py-20 text-white flex flex-col">
                                 {/* first text div */}
@@ -589,7 +595,7 @@ function App() {
                                 </div>
                             </div>
                             {/* side bar */}
-                            <div className="md:w-[20%] flex items-start justify-start flex-col text-white py-20 px-10 gap-5"
+                            <div className="md:w-[20%] flex items-start justify-start flex-col text-white py-5N md:py-20 px-10 gap-5"
                                 data-aos="fade-up" data-aos-offset="300">
                                 <div>
                                     <a href={projects[projectId].websiteLink} target="blank"
@@ -671,7 +677,7 @@ function App() {
                                         onClick={e => handleClick(e, index)}
                                         className={`flex flex-row-reverse opacity-0 cursor-pointer origin-right animate-all -rotate-y-15 hover:-rotate-y-5 duration-700 ease-in-out`}
                                         style={{ animationDelay: `${index * 0.1}s` }}>
-                                        <h1 className='text-[5rem] sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] font-black text-right tracking-normal sm:tracking-tight text-black !font-sans  leading-none md:leading-[0.8] hover:text-white md:text-stroke-medium whitespace-pre-wrap'>
+                                        <h1 className='text-[5rem] sm:text-[8rem] md:text-[9rem] lg:text-[10rem] xl:text-[11rem] font-black text-right tracking-normal sm:tracking-tight text-black !font-sans  leading-none md:leading-[0.8] hover:text-white md:hover:text-transparent md:text-stroke-medium whitespace-pre-wrap'>
                                             {item}
                                         </h1>
                                     </div>
