@@ -394,7 +394,7 @@ function App() {
     return (
         <div className='bg-primary min-w-screen min-h-screen flex  items-end flex-col overflow-hidden'>
             {/* absolute claim to eric van holtz design */}
-            <div className="absolute left-2 top-2 w-fit h-fit opacity-50 text-xs text-white">Design by Eric Van Holtz</div>
+            <div className="absolute left-2 top-2 w-fit h-fit opacity-50 text-xs text-white">Designed with inspiration from Van Holtz Co; fully developed by me.</div>
             {/* arrow to go back (absolute) */}
             {
                 isProject || isSkills && (
