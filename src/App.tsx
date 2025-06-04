@@ -473,7 +473,7 @@ function App() {
                     </div>
                     <div data-aos="fade-up" data-aos-delay="1100"
                         className='flex items-start justify-start flex-col  perspective-[1000px]'>
-                        <a href="https://x.com/OmarInProgress"
+                        <a href="https://x.com/omarinpublic"
                             target="blank" className="flex items-center justify-center gap-2 font-semibold hover:rotate-y-30 origin-left cursor-pointer ">
                             <span className="text-xs">03</span>X <span className="text-xs">(Twitter)</span>
                         </a>
