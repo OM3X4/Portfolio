@@ -1,30 +1,16 @@
-import { BsFillPhoneFill } from "react-icons/bs";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { MdOutlineMilitaryTech } from "react-icons/md";
-import { MdEventAvailable } from "react-icons/md";
-import { SiRust } from "react-icons/si";
-import { BsFillGearFill } from "react-icons/bs";
 /* eslint-disable */
 // ===== React Icons =====
 
-// Ai (Ant Design Icons)
 import { AiFillGithub, AiOutlineArrowLeft, AiOutlineLineChart } from "react-icons/ai";
-// Bs (Bootstrap Icons)
-import { BsGit, BsKeyboardFill } from "react-icons/bs";
-// Cg (CSS.gg Icons)
+import { BsGit, BsKeyboardFill , BsFillGearFill , BsFillPhoneFill } from "react-icons/bs";
 import { CgLivePhoto } from "react-icons/cg";
-// Di (Devicons)
 import { DiPostgresql, DiPython, DiReact } from "react-icons/di";
-// Fa (Font Awesome)
 import { FaNodeJs, FaQuoteRight } from "react-icons/fa";
-// Gr (Grommet Icons)
 import { GrLocation } from "react-icons/gr";
-// Io (Ionicons)
 import { IoLogoNpm } from "react-icons/io";
-// Md (Material Design Icons)
-import { MdHttp } from "react-icons/md";
-// Si (Simple Icons)
+import { MdHttp , MdEventAvailable , MdOutlineMilitaryTech } from "react-icons/md";
 import {
+    SiRust,
     SiDjango,
     SiJavascript,
     SiJsonwebtokens,
@@ -39,10 +25,12 @@ import {
     SiShadcnui,
     SiSupabase,
     SiTailwindcss,
-    SiTypescript
+    SiTypescript,
+    SiExpress,
+    SiPrisma
 } from "react-icons/si";
-// Tb (Tabler Icons)
 import {
+    TbBrandFramerMotion,
     TbApi,
     TbBrandCpp,
     TbBrandVite,
@@ -55,6 +43,7 @@ import AOS from "aos";
 import 'aos/dist/aos.css'
 
 const data = [
+    "oAI",
     "BRAINS-\nMATH2.0",
     "QUEEN-\nFISH",
     "EGYPT-\nPROJECTS",
@@ -65,6 +54,63 @@ const data = [
 ]
 
 const projects = [
+    {
+        name: "oAI",
+        images: [
+            "/oAI1.png",
+            "/oAI2.png",
+        ],
+        mainHeadline: "oAI is an Open Source t3.chat Clone Built for the OpenRouter Crowd",
+        secondParagraph: "Built for Theo’s t3.chat Cloneathon, oAI is a sleek, open wrapper around the OpenRouter API — with BYOK, chat branching, and memory.",
+        mainParagraph: "oAI is a fully open-source clone of t3.chat that replicates the full UX and feature set: chat history, authentication, memory, and chat branching. It’s powered by Supabase, Prisma, and OpenRouter, with a bring-your-own-key model that puts users in control.",
+        thirdParagraph: "If you know what an API key is, you’ll feel right at home. oAI isn’t just a clone — it’s a clean base for hacking, learning, and customizing your own AI chat playground.",
+        quote: '"I built oAI as my entry for the t3.chat cloneathon — not just to copy, but to really learn what makes apps like this tick. It’s open, simple, and designed for devs who want full control." — Omar Emad',
+        websiteLink: "https://oaichat.netlify.app",
+        codeLink: "https://github.com/OM3X4/oAI",
+        engineer: "Omar Emad (Me)",
+        stack: [
+            {
+                name: "React",
+                icon: <DiReact />
+            },
+            {
+                name: "Express",
+                icon: <SiExpress />
+            },
+            {
+                name: "Prisma",
+                icon: <SiPrisma />
+            },
+            {
+                name: "OpenAI API",
+                icon: <SiOpenai />
+            },
+            {
+                name: "Tailwind CSS",
+                icon: <SiTailwindcss />
+            },
+            {
+                name: "Postgres",
+                icon: <DiPostgresql />
+            },
+            {
+                name: "TypeScript",
+                icon: <SiTypescript />
+            },
+            {
+                name: "React Query",
+                icon: <SiReactquery />
+            },
+            {
+                name: "Supabase",
+                icon: <SiSupabase />
+            },
+            {
+                name: "ShadCN UI",
+                icon: <SiShadcnui />
+            },
+        ]
+    },
     {
         name: "BRAINS-\nMATH2.0",
         images: [
@@ -350,7 +396,7 @@ function App() {
             duration: 800, // animation duration
             once: true,    // whether animation should happen only once - while scrolling down
         });
-    })
+    }, [])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -610,7 +656,7 @@ function App() {
                                 <div>
                                     <h1 className="text-lg font-semibold">Stack</h1>
                                     {
-                                        projects[projectId].stack.map((item, index) => (
+                                        projects[projectId].stack?.map((item, index) => (
                                             <div key={index} className="flex items-center justify-start gap-2 text-sm">
                                                 {item.icon}
                                                 <h1 className="font-semibold">{item.name}</h1>
